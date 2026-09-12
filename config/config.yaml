@@ -1,0 +1,56 @@
+paths:
+  raw_loan_data: data/raw/sba_raw.csv
+  raw_macro_data: data/raw/historical_macro_data.csv
+  processed_tape: data/processed/sba_portfolio_tape.csv
+  macro_forecasts: data/scenarios/macro_forecasts.csv
+  pd_model: models/pd_model.pkl
+  lgd_model: models/lgd_model.pkl
+macro_variables:
+- realgdp_growth
+- unemp
+model_features:
+  pd_financials:
+  - leverage
+  - liquidity_ratio
+  lgd_financials:
+  - collateral_value
+  - ltv
+  macro_lags:
+  - realgdp_growth_lag_1Q
+  - unemp_lag_1Q
+monotonic_constraints:
+  leverage: 1
+  liquidity_ratio: -1
+  realgdp_growth: -1
+  unemp: 1
+ecl:
+  discount_rate: 0.03
+  max_horizon_years: 5
+  hazard_growth: 0.05
+  hazard_floor: 0.0001
+  hazard_cap: 0.5
+  downturn_lgd_floor: 0.15
+  sicr_pd_ratio: 2.5
+  sicr_pd_add: 0.08
+  stage3_pd: 0.6
+  stage2_dpd: 30
+  stage3_dpd: 90
+  pd_overlay:
+    gdp_elasticity: -6.0
+    unemp_elasticity: 0.08
+scenario_weights:
+  baseline: 0.5
+  adverse: 0.3
+  severe: 0.2
+stress_scenarios:
+  baseline:
+    gdp_shock: 0.0
+    unemp_shock: 0.0
+  adverse:
+    gdp_shock: -0.02
+    unemp_shock: 1.5
+  severe:
+    gdp_shock: -0.05
+    unemp_shock: 3.0
+mlflow:
+  experiment_name: IFRS9_ECL_Modeling

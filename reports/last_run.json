@@ -1,0 +1,77 @@
+{
+  "pwecl": 6823895968.047734,
+  "metrics": {
+    "model": {
+      "n": 269151,
+      "default_rate": 0.18106193177807253,
+      "mean_pred": 0.18109944324093125,
+      "brier": 0.1391972140355381,
+      "auc": 0.6823915641422879,
+      "calibration_slope": 0.9876715101995293
+    },
+    "challenger_logit": {
+      "n": 269151,
+      "default_rate": 0.18106193177807253,
+      "mean_pred": 0.18114869854848967,
+      "brier": 0.14083330911535327,
+      "auc": 0.666780693366687,
+      "calibration_slope": 1.0103564396904439
+    },
+    "label_note": "tape default_flag (Kaggle CHGOFF/PIF if layout detected; else as cleaned)",
+    "run_id": "21d78d29bcdc4013af7b6a81d69e3e97"
+  },
+  "portfolio": {
+    "total_facilities": 897167,
+    "total_ead": 180867103981.0,
+    "source": "kaggle_sba_national",
+    "layout": "kaggle_sba_national",
+    "default_rate": 0.1810610510640717
+  },
+  "scenarios": {
+    "baseline": {
+      "Total_ECL": 6754141037.933749,
+      "ECL_12M_sum": 5080112896.575769,
+      "ECL_lifetime_sum": 14402536617.35516,
+      "ECL_stage1": 4135445633.879523,
+      "ECL_stage2": 2618695404.054228,
+      "ECL_stage3": 0.0,
+      "Coverage": 0.0373431148576541,
+      "Average_PD": 0.24638062292012408,
+      "Average_PIT_LGD": 0.11219770585470229,
+      "Average_Downturn_LGD": 0.15000000000000022,
+      "Stage1_share": 0.86071155091527,
+      "Stage2_share": 0.13928844908473004,
+      "Stage3_share": 0.0
+    },
+    "adverse": {
+      "Total_ECL": 6861212636.30382,
+      "ECL_12M_sum": 5137331212.112732,
+      "ECL_lifetime_sum": 14522223779.126652,
+      "ECL_stage1": 4163270750.4078116,
+      "ECL_stage2": 2697941885.8960066,
+      "ECL_stage3": 0.0,
+      "Coverage": 0.037935105308174705,
+      "Average_PD": 0.2485082838912583,
+      "Average_PIT_LGD": 0.11718987243489373,
+      "Average_Downturn_LGD": 0.15000000000000022,
+      "Stage1_share": 0.858282794619062,
+      "Stage2_share": 0.141717205380938,
+      "Stage3_share": 0.0
+    },
+    "severe": {
+      "Total_ECL": 6942308290.9485655,
+      "ECL_12M_sum": 5187761721.827801,
+      "ECL_lifetime_sum": 14647677640.798267,
+      "ECL_stage1": 4194016601.481722,
+      "ECL_stage2": 2748291689.466841,
+      "ECL_stage3": 0.0,
+      "Coverage": 0.03838347680779945,
+      "Average_PD": 0.2501083478736703,
+      "Average_PIT_LGD": 0.12469652101573435,
+      "Average_Downturn_LGD": 0.15250111305523015,
+      "Stage1_share": 0.8565350709511161,
+      "Stage2_share": 0.1434649290488839,
+      "Stage3_share": 0.0
+    }
+  }
+}
